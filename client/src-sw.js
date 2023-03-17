@@ -7,10 +7,6 @@ const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
-setDefaultHandler(new NetworkOnly());
-
-offlineFallback();
-
 const pageCache = new CacheFirst({
   cacheName: 'page-cache',
   plugins: [
